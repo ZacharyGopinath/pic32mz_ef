@@ -9,7 +9,7 @@
 #include <plib.h>            /* Include to use PIC32 peripheral libraries     */
 #include <stdint.h>          /* For uint32_t definition                       */
 #include <stdbool.h>         /* For true/false definition                     */
-#include "user.h"            /* variables/params used by user.c               */
+#include "../src/user.h"     /* variables/params used by user.c               */
 
 /******************************************************************************/
 /* User Functions                                                             */
