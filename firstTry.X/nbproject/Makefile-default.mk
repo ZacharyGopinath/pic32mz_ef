@@ -107,90 +107,90 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/configuration_bits.o: configuration_bits.c  .generated_files/flags/default/dd8c12a25149b3bcd02d12f466ca0a29c1b9031a .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/configuration_bits.o: configuration_bits.c  .generated_files/flags/default/f9282344e5d37f70a169c466c3b8099a6b2673e .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
 	@${RM} ${OBJECTDIR}/configuration_bits.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/exceptions.o: exceptions.c  .generated_files/flags/default/c9d1de93e383987753b9abeca96dc8efc180ef41 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/exceptions.o: exceptions.c  .generated_files/flags/default/38a6d70f1270f4f20114a8dcc2458fc769a68dc .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/exceptions.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/interrupts.o: interrupts.c  .generated_files/flags/default/6c0ddbea0e693eead033317729b2bdb5075ff5d7 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/interrupts.o: interrupts.c  .generated_files/flags/default/ae254c0a797353c8cb79f8cb3f23c3dc00adb6e9 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/interrupts.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/d1abd907c966847c1b14e2e0a0af31bca0786cba .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/9c5cd16cbf6a21e7f124efb6e0175d0677988b7b .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/system.o: system.c  .generated_files/flags/default/e101ca667d3b3d54d0626aaa2768577d124b3fa6 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/system.o: system.c  .generated_files/flags/default/7d24419294b336bc08125941f7440c5f02077b71 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/system.o.d 
 	@${RM} ${OBJECTDIR}/system.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/user.o: user.c  .generated_files/flags/default/1c16dfaac76d36b2487e829816463567aa4a59c6 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/user.o: user.c  .generated_files/flags/default/8387010e7a40fa4cf2358857f59a0bc95767bc70 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/user.o.d 
 	@${RM} ${OBJECTDIR}/user.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/store.o: ../src/store.c  .generated_files/flags/default/24ffd3de5d371b5ef5c38054cb869db5e051a344 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/_ext/1360937237/store.o: ../src/store.c  .generated_files/flags/default/4946b5e942f8ff7d79c96ffc3be23943c2e5e6a8 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/store.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/store.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/store.o.d" -o ${OBJECTDIR}/_ext/1360937237/store.o ../src/store.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/store.o.d" -o ${OBJECTDIR}/_ext/1360937237/store.o ../src/store.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
-${OBJECTDIR}/configuration_bits.o: configuration_bits.c  .generated_files/flags/default/ac1db8dc108b3a39a4b6dfce4bbc8451624a6fc1 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/configuration_bits.o: configuration_bits.c  .generated_files/flags/default/ecfcc4e6a98526d87041b5f2a7d4fd447f0af4c8 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
 	@${RM} ${OBJECTDIR}/configuration_bits.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/exceptions.o: exceptions.c  .generated_files/flags/default/51de317f8f5dec811147b9729844cd7cc49d9287 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/exceptions.o: exceptions.c  .generated_files/flags/default/6ece65342da38f4d80c00ab52668840ad17ed19b .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/exceptions.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/interrupts.o: interrupts.c  .generated_files/flags/default/f9ce8373c2909a2bf06b907dae067302c2a1e87 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/interrupts.o: interrupts.c  .generated_files/flags/default/562174dc6b275e49f45768ca29582873dc48a98 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/interrupts.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/78115e7fffee6332224a8df16a8324780ca00b20 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/f88ec0ee64c515c71dada1bb9c950c599325b085 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/system.o: system.c  .generated_files/flags/default/ec6db5f433b09ae44789b564b0af936987bc9793 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/system.o: system.c  .generated_files/flags/default/94cc7f4b40f618829412247f32cae9f81d9a998a .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/system.o.d 
 	@${RM} ${OBJECTDIR}/system.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/user.o: user.c  .generated_files/flags/default/20fd79cdc9d6876397be9c11f75df91ad2fc63c4 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/user.o: user.c  .generated_files/flags/default/e1fedf2cfe684e02f11332a74e831291f31a6eb8 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/user.o.d 
 	@${RM} ${OBJECTDIR}/user.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/store.o: ../src/store.c  .generated_files/flags/default/e6999822bf64fc834192ce141aa2c3815fa7bff9 .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
+${OBJECTDIR}/_ext/1360937237/store.o: ../src/store.c  .generated_files/flags/default/7b0a066e315586a90f8d317ef34bcf1fcb69666f .generated_files/flags/default/c24b72d7bee263215258d3ef55fcfe58c1441450
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/store.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/store.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/store.o.d" -o ${OBJECTDIR}/_ext/1360937237/store.o ../src/store.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/store.o.d" -o ${OBJECTDIR}/_ext/1360937237/store.o ../src/store.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

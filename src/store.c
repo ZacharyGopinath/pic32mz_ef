@@ -9,7 +9,7 @@ int32_t main(void)
     DDPCONbits.JTAGEN = 0;
 #endif
 USING ICD3, JTAG NOT NEEDED (?) 
-    /*Refer to the C32 peripheral library documentation for more
+    Refer to the C32 peripheral library documentation for more
     information on the SYTEMConfig function.
     
     This function sets the PB divider, the Flash Wait States, and the DRM
@@ -24,18 +24,18 @@ USING ICD3, JTAG NOT NEEDED (?)
     SYS_CFG_PCACHE (configures the pCache if used)
     SYS_CFG_ALL (configures the flash wait states, PB bus, and pCache)
 
-    /* TODO Add user clock/system configuration code if appropriate. 
+    TODO Add user clock/system configuration code if appropriate. 
     SYSTEMConfig(SYS_FREQ, SYS_CFG_ALL); 
 
-    /* Initialize I/O and Peripherals for application 
+   Initialize I/O and Peripherals for application 
     InitApp();
 
-    /*Configure Multivector Interrupt Mode.  Using Single Vector Mode
+    Configure Multivector Interrupt Mode.  Using Single Vector Mode
     is expensive from a timing perspective, so most applications
     should probably not use a Single Vector Mode
     INTConfigureSystem(INT_SYSTEM_CONFIG_MULT_VECTOR);
 
-    /* TODO <INSERT USER APPLICATION CODE HERE> 
+     TODO <INSERT USER APPLICATION CODE HERE> 
 
     while(1)
     {
