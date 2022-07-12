@@ -3,13 +3,18 @@
 /******************************************************************************/
 #ifdef FREERTOS_CONFIG_H
 #endif
-//"C:\Program Files\Microchip\xc32\v4.10\pic32mx\include\lega-c\plib.h"
+// "C:\Program Files\Microchip\xc32\v4.10\pic32mx\include\lega-c\plib.h"
+// address of plib header file
 #ifdef __XC32
     #include <xc.h>          /* Defines special funciton registers, CP0 regs  */
 #endif
 
 #include <stdio.h>
+#include <time.h>
+
 //#include <plib.h>            /* Include to use PIC32 peripheral libraries      */
+// plib is legacy peripheral libraries, did not come installed, 
+// did not include and seems to be fine
 #include <stdint.h>          /* For uint32_t definition                        */
 #include <stdbool.h>         /* For true/false definition                      */
 #include <sys/attribs.h>     /* For __ISR definition                          */
@@ -25,78 +30,120 @@
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
-
-// #define _XTAL_FREQ 20000000 //define crystal frequency to 20MHz
+#include <xc.h>
+#include<stdlib.h>
 /*
-void int main(void) 
-{
-int TRISRC0=0; //set RC0 pin as a digital output pin
-while(1)
-{
-   RC0 = 1;                  // set RC0 pin to logic High &  turn on 
-   __delay_ms(1000);  //add delay of 1 second 
-   RC0 = 0;                  // set RC0 pin to logic low & turn off
-  __delay_ms(1000);  //add delay of 1 second
-
-}
-return;
-}
-*/
-
-#define LEDS_ON_OFF 0x55
-#define LEDS_OFF_ON 0xAA
 void delay (void)
 {
- int n = 50000;
- while(n>0) {n--;}
-}
+ //int n = 50000000000;
+ //while(n > 0) {n--;} // decrementing n adds short gap when delay invoked
+    for(int i = 2500; i > 0; i--);
+}*/
+
+//void delay(int milliseconds)
+//{
+//    long pause;
+//    clock_t now,then;
+//
+//    pause = milliseconds*(CLOCKS_PER_SEC/1000);
+//    now = then = clock();
+//    while( (now-then) < pause )
+//        now = clock();
+//}
+
+void delay (void){
+    for (long long i = 10000000000000; i > 0; i--){};
+};
+
 int main(void) {
     
-// Port A access
-    TRISA = 0x0000;
-    //TRISAbits.TRISA1 = LEDS_ON_OFF; // tristate A, set all port bits to be output
-    //LATA = LEDS_ON_OFF; // latch A, write to port latch
-    //LATAbits.LATA1 = LEDS_OFF_ON;
-    while(1) {
-     LATA = LEDS_ON_OFF; // write to port latch
-     // delay value change
-     delay();
-     LATA = LEDS_OFF_ON; // write to port latch
-     // delay value change
-     delay();
-     }
-     return -1;
-}
-
-/*
-void melis (unsigned int time){
-    unsigned int i;                                         // number of milliseconds requested
-    unsigned int del1;                                      // count for 1 millisecond
     
-    for (i = 0; i < time; i++){                             // millisecond loop
-        for (del1 = 0; del1 < 4440; del1++);                // trial and error adjust second parameter to give approximately 1 millisecond
+    //TRISE = 0; // works for RE0
+    TRISEbits.TRISE0 = 0;
+    TRISEbits.TRISE1 = 0;
+    //LATEbits.LATE0 = 0;
+    while (1){
+    //for (int e = 10000; e > 0; e--){
+        //LATEbits.LATE0 = !LATEbits.LATE0;
+        LATEbits.LATE1 = !LATEbits.LATE1;
+        delay();
+        delay();
+        delay();
+        delay();
+        delay();
+        
+    
+        //LATEbits.LATE0 = 0;
+        //delay();
+        
+//        delay();
+//        if (PORTEbits.RE0 == 0){
+//            LATEbits.LATE0 = 0;
+//        }
+        
+//        if (LATEbits.LATE0 == 1) {
+//            LATEbits.LATE0 = 0; // this line runs but ...
+//            delay();
+//        };
+//        LATEbits.LATE0 = 1; // this doesn't
+        // back to top of loop ??
     }
+    //LATEbits.LATE0 = 1; // exits for loop
+    //}
+    //LATEbits.LATE0 = 0; // doesn't exit while loop
+    
+    
+//    while(1) {
+//        if (PORTEbits.RE0 == 0) {
+//            LATEbits.LATE0 = 1;
+//            delay();
+//            LATEbits.LATE0 = 0;
+//        };
+        //delay();
+//        LATEbits.LATE0 = 0;
+//        delay();
+    //}
+//    while(1) {
+//        //LATE = 1; // works for RE0
+//        LATEbits.LATE0 = 1;
+//        /*
+//        LATEbits.LATE0 == 1 ? LATEbits.LATE0 = 0 : (LATEbits.LATE0 = 1);
+//        delay();
+//        LATEbits.LATE0 == 0 ? (LATEbits.LATE0 = 1) : (LATEbits.LATE0 = 0);
+//        delay();
+//        */
+//        for (int j = 100; j > 0; j--){
+//            LATEbits.LATE0 = 0;
+//            printf
+//            delay(500);
+//            LATEbits.LATE0 = 1;
+//            delay(500);
+//        };
+    //}
 }
-
-int main(){
-
-    TRISA = 0;                                              // all output
-    TRISB = 0;                                              // all output
-    TRISC = 0;                                              // all output
-
-    ANSELA = 0;                                             // all digital
-    ANSELB = 0;                                             // all digital
-    ANSELC = 0;                                             // all digital
-
-    LATA = 0;                                               // Set PORTA to zero
-    LATB = 0;                                               // Set PORTB to zero
-    LATC = 0;                                               // Set PORTC to zero
-    while(1){
-        melis (500);                                        // number of milliseconds delay - allow time for eye to see LED flash
-
-        LATA = ~LATA;                                       // Invert PORTA value
-        LATB = ~LATB;                                       // Invert PORTB value
-        LATC = ~LATC;                                       // Invert PORTC value
-    }
-}
-*/
+/*
+        TRISEbits.TRISE0 = 0; //set pin as output
+        LATEbits.LATE0 = 1; // set logic to high, turn LED on
+        delay();
+        TRISEbits.TRISE1 = 0; 
+        LATEbits.LATE1 = 1; 
+        delay();
+        TRISEbits.TRISE2 = 0; 
+        LATEbits.LATE2 = 1; 
+        delay();
+        TRISEbits.TRISE3 = 0; 
+        LATEbits.LATE3 = 1; 
+        delay();
+        TRISEbits.TRISE4 = 0; 
+        LATEbits.LATE4 = 1; 
+        delay();
+        TRISEbits.TRISE5 = 0; 
+        LATEbits.LATE5 = 1; 
+        delay();
+        TRISEbits.TRISE6 = 0; 
+        LATEbits.LATE6 = 1; 
+        delay();
+        TRISEbits.TRISE7 = 0; 
+        LATEbits.LATE7 = 1; 
+        delay();
+        */
