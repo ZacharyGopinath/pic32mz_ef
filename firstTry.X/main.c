@@ -50,100 +50,225 @@ void delay (void)
 //    while( (now-then) < pause )
 //        now = clock();
 //}
+#define _XTAL_FREQ 32000000 
+#define _PLIB_OSC_H
 
 void delay (void){
-    for (long long i = 10000000000000; i > 0; i--){};
+    for (int i = 50000; i > 0; i--){};
 };
 
 int main(void) {
-    
-    
+    //oscCurrent = PLIB_OSC_CurrentSysClockGet(OSC_ID_0);
+    //OSC_SYS_TYPE oscCurrent;
     //TRISE = 0; // works for RE0
     TRISEbits.TRISE0 = 0;
     TRISEbits.TRISE1 = 0;
-    //LATEbits.LATE0 = 0;
+    TRISEbits.TRISE2 = 0;
+    TRISEbits.TRISE3 = 0;
+    TRISEbits.TRISE4 = 0;
+    TRISEbits.TRISE5 = 0;
+    TRISEbits.TRISE6 = 0;
+    TRISEbits.TRISE7 = 0;
+    
+    LATEbits.LATE0 = 0;
+    
     while (1){
-    //for (int e = 10000; e > 0; e--){
-        //LATEbits.LATE0 = !LATEbits.LATE0;
+        delay();
+        LATEbits.LATE0 = !LATEbits.LATE0;
+        delay();
         LATEbits.LATE1 = !LATEbits.LATE1;
         delay();
+        LATEbits.LATE2 = !LATEbits.LATE2;
         delay();
+        LATEbits.LATE3 = !LATEbits.LATE3;
         delay();
+        LATEbits.LATE4 = !LATEbits.LATE4;
+        delay();
+        LATEbits.LATE5 = !LATEbits.LATE5;
+        delay();
+        LATEbits.LATE7 = !LATEbits.LATE7;
+        delay();
+        LATEbits.LATE6 = !LATEbits.LATE6;
+        delay();
+        // all on
+        delay();
+        LATEbits.LATE6 = !LATEbits.LATE6;
+        delay();
+        LATEbits.LATE7 = !LATEbits.LATE7;
+        delay();
+        LATEbits.LATE5 = !LATEbits.LATE5;
+        delay();
+        LATEbits.LATE4 = !LATEbits.LATE4;
+        delay();
+        LATEbits.LATE3 = !LATEbits.LATE3;
+        delay();
+        LATEbits.LATE2 = !LATEbits.LATE2;
+        delay();
+        LATEbits.LATE1 = !LATEbits.LATE1;
+        delay();
+        LATEbits.LATE0 = !LATEbits.LATE0;
+        delay();
+        // all off
+        LATEbits.LATE0 = 1;
+        delay();
+        LATEbits.LATE0 = 0;
+        delay();
+        LATEbits.LATE2 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        delay();
+        
+        LATEbits.LATE1 = 1;
+        delay();
+        LATEbits.LATE1 = 0;
+        delay();
+        LATEbits.LATE3 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        delay();
+        
+        LATEbits.LATE2 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        delay();
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE4 = 0;
+        delay();
+        
+        LATEbits.LATE3 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        delay();
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE5 = 0;
+        delay();
+        
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE4 = 0;
+        delay();
+        LATEbits.LATE7 = 1;
+        delay();
+        LATEbits.LATE7 = 0;
+        delay();
+        
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE5 = 0;
+        delay();
+        LATEbits.LATE6 = 1;
+        delay();
+        LATEbits.LATE6 = 0;
         delay();
         delay();
         
-    
-        //LATEbits.LATE0 = 0;
-        //delay();
+        LATEbits.LATE6 = 1;
+        delay();
+        LATEbits.LATE6 = 0;
+        delay();
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE5 = 0;
+        delay();
         
-//        delay();
-//        if (PORTEbits.RE0 == 0){
-//            LATEbits.LATE0 = 0;
-//        }
+        LATEbits.LATE7 = 1;
+        delay();
+        LATEbits.LATE7 = 0;
+        delay();
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE4 = 0;
+        delay();
         
-//        if (LATEbits.LATE0 == 1) {
-//            LATEbits.LATE0 = 0; // this line runs but ...
-//            delay();
-//        };
-//        LATEbits.LATE0 = 1; // this doesn't
-        // back to top of loop ??
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE5 = 0;
+        delay();
+        LATEbits.LATE3 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        delay();
+        
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE4 = 0;
+        delay();
+        LATEbits.LATE2 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        delay();
+        
+        LATEbits.LATE3 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        delay();
+        LATEbits.LATE1 = 1;
+        delay();
+        LATEbits.LATE1 = 0;
+        delay();
+        
+        LATEbits.LATE2 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        delay();
+        LATEbits.LATE0 = 1;
+        delay();
+        LATEbits.LATE0 = 0;
+        delay();
+        delay();
+        delay();
+        LATEbits.LATE0 = 1;
+        LATEbits.LATE6 = 1;
+        delay();
+        LATEbits.LATE0 = 0;
+        LATEbits.LATE6 = 0;
+        delay();
+        LATEbits.LATE1 = 1;
+        LATEbits.LATE7 = 1;
+        delay();
+        LATEbits.LATE1 = 0;
+        LATEbits.LATE7 = 0;
+        delay();
+        LATEbits.LATE2 = 1;
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        LATEbits.LATE5 = 0;
+        delay();
+        LATEbits.LATE3 = 1;
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        LATEbits.LATE4 = 0;
+        delay();
+        delay();
+        
+        LATEbits.LATE3 = 1;
+        LATEbits.LATE4 = 1;
+        delay();
+        LATEbits.LATE3 = 0;
+        LATEbits.LATE4 = 0;
+        delay();
+        LATEbits.LATE2 = 1;
+        LATEbits.LATE5 = 1;
+        delay();
+        LATEbits.LATE2 = 0;
+        LATEbits.LATE5 = 0;
+        delay();
+        LATEbits.LATE1 = 1;
+        LATEbits.LATE7 = 1;
+        delay();
+        LATEbits.LATE1 = 0;
+        LATEbits.LATE7 = 0;
+        delay();
+        LATEbits.LATE0 = 1;
+        LATEbits.LATE6 = 1;
+        delay();
+        LATEbits.LATE0 = 0;
+        LATEbits.LATE6 = 0;
+        delay();
     }
-    //LATEbits.LATE0 = 1; // exits for loop
-    //}
-    //LATEbits.LATE0 = 0; // doesn't exit while loop
-    
-    
-//    while(1) {
-//        if (PORTEbits.RE0 == 0) {
-//            LATEbits.LATE0 = 1;
-//            delay();
-//            LATEbits.LATE0 = 0;
-//        };
-        //delay();
-//        LATEbits.LATE0 = 0;
-//        delay();
-    //}
-//    while(1) {
-//        //LATE = 1; // works for RE0
-//        LATEbits.LATE0 = 1;
-//        /*
-//        LATEbits.LATE0 == 1 ? LATEbits.LATE0 = 0 : (LATEbits.LATE0 = 1);
-//        delay();
-//        LATEbits.LATE0 == 0 ? (LATEbits.LATE0 = 1) : (LATEbits.LATE0 = 0);
-//        delay();
-//        */
-//        for (int j = 100; j > 0; j--){
-//            LATEbits.LATE0 = 0;
-//            printf
-//            delay(500);
-//            LATEbits.LATE0 = 1;
-//            delay(500);
-//        };
-    //}
-}
-/*
-        TRISEbits.TRISE0 = 0; //set pin as output
-        LATEbits.LATE0 = 1; // set logic to high, turn LED on
-        delay();
-        TRISEbits.TRISE1 = 0; 
-        LATEbits.LATE1 = 1; 
-        delay();
-        TRISEbits.TRISE2 = 0; 
-        LATEbits.LATE2 = 1; 
-        delay();
-        TRISEbits.TRISE3 = 0; 
-        LATEbits.LATE3 = 1; 
-        delay();
-        TRISEbits.TRISE4 = 0; 
-        LATEbits.LATE4 = 1; 
-        delay();
-        TRISEbits.TRISE5 = 0; 
-        LATEbits.LATE5 = 1; 
-        delay();
-        TRISEbits.TRISE6 = 0; 
-        LATEbits.LATE6 = 1; 
-        delay();
-        TRISEbits.TRISE7 = 0; 
-        LATEbits.LATE7 = 1; 
-        delay();
-        */
+    return 0;
+};

@@ -75,3 +75,58 @@ from plib.h, from user.c
 #endif
 
 */
+
+//    while(1) {
+//        if (PORTEbits.RE0 == 0) {
+//            LATEbits.LATE0 = 1;
+//            delay();
+//            LATEbits.LATE0 = 0;
+//        };
+        //delay();
+//        LATEbits.LATE0 = 0;
+//        delay();
+    //}
+//    while(1) {
+//        //LATE = 1; // works for RE0
+//        LATEbits.LATE0 = 1;
+//        /*
+//        LATEbits.LATE0 == 1 ? LATEbits.LATE0 = 0 : (LATEbits.LATE0 = 1);
+//        delay();
+//        LATEbits.LATE0 == 0 ? (LATEbits.LATE0 = 1) : (LATEbits.LATE0 = 0);
+//        delay();
+//        */
+//        for (int j = 100; j > 0; j--){
+//            LATEbits.LATE0 = 0;
+//            printf
+//            delay(500);
+//            LATEbits.LATE0 = 1;
+//            delay(500);
+//        };
+    //}
+
+/*
+        TRISEbits.TRISE0 = 0; //set pin as output
+        LATEbits.LATE0 = 1; // set logic to high, turn LED on
+        delay();
+        TRISEbits.TRISE1 = 0; 
+        LATEbits.LATE1 = 1; 
+        delay();
+        TRISEbits.TRISE2 = 0; 
+        LATEbits.LATE2 = 1; 
+        delay();
+        TRISEbits.TRISE3 = 0; 
+        LATEbits.LATE3 = 1; 
+        delay();
+        TRISEbits.TRISE4 = 0; 
+        LATEbits.LATE4 = 1; 
+        delay();
+        TRISEbits.TRISE5 = 0; 
+        LATEbits.LATE5 = 1; 
+        delay();
+        TRISEbits.TRISE6 = 0; 
+        LATEbits.LATE6 = 1; 
+        delay();
+        TRISEbits.TRISE7 = 0; 
+        LATEbits.LATE7 = 1; 
+        delay();
+        */

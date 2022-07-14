@@ -15,30 +15,31 @@
 // DEVCFG2
 #pragma config FPLLIDIV = DIV_8         // System PLL Input Divider (8x Divider)
 #pragma config FPLLRNG = RANGE_34_68_MHZ// System PLL Input Range (34-68 MHz Input)
-#pragma config FPLLICLK = PLL_FRC       // System PLL Input Clock Selection (FRC is input to the System PLL)
+#pragma config FPLLICLK = PLL_POSC       // System PLL Input Clock Selection (FRC is input to the System PLL)
 #pragma config FPLLMULT = MUL_128       // System PLL Multiplier (PLL Multiply by 128)
 #pragma config FPLLODIV = DIV_32        // System PLL Output Clock Divider (32x Divider)
-//#pragma config UPLLEN = ON
+//#pragma config UPLLEN = ON            // Enable USB PLL
 #pragma config UPLLFSEL = FREQ_24MHZ    // USB PLL Input Frequency Selection (USB PLL input is 24 MHz)
 
 // DEVCFG1
-#pragma config FNOSC = FRCDIV           // Oscillator Selection Bits (Fast RC Osc w/Div-by-N (FRCDIV))
+#pragma config FNOSC = POSC           // Oscillator Selection Bits (Fast RC Osc w/Div-by-N (FRCDIV))
+#pragma config IESO = ON                // Internal/External Switch Over (Enabled)
 #pragma config DMTINTV = WIN_127_128    // DMT Count Window Interval (Window/Interval value is 127/128 counter value)
 #pragma config FSOSCEN = ON             // Secondary Oscillator Enable (Enable SOSC)
-#pragma config IESO = ON                // Internal/External Switch Over (Enabled)
-#pragma config POSCMOD = HS            // Primary Oscillator Configuration (Primary osc disabled)
+//oscCurrent = PLIB_osc_CurrentSysClockGet(osc_ID_2);
+#pragma config POSCMOD = EC            // Primary Oscillator Configuration (Primary osc disabled)
 #pragma config OSCIOFNC = ON           // CLKO Output Signal Active on the OSCO Pin (Disabled)
 #pragma config FCKSM = CSECME           // Clock Switching and Monitor Selection (Clock Switch Enabled, FSCM Enabled)
+#pragma config FWDTEN = OFF             // Watchdog Timer Enable (WDT Enabled)
 #pragma config WDTPS = PS1048576        // Watchdog Timer Postscaler (1:1048576)
 #pragma config WDTSPGM = STOP           // Watchdog Timer Stop During Flash Programming (WDT stops during Flash programming)
 #pragma config WINDIS = NORMAL          // Watchdog Timer Window Mode (Watchdog Timer is in non-Window mode)
-#pragma config FWDTEN = ON              // Watchdog Timer Enable (WDT Enabled)
 #pragma config FWDTWINSZ = WINSZ_25     // Watchdog Timer Window Size (Window size is 25%)
 #pragma config DMTCNT = DMT31           // Deadman Timer Count Selection (2^31 (2147483648))
-#pragma config FDMTEN = ON              // Deadman Timer Enable (Deadman Timer is enabled)
+#pragma config FDMTEN = OFF              // Deadman Timer Enable (Deadman Timer is enabled)
 
 // DEVCFG0
-#pragma config DEBUG = OFF              // Background Debugger Enable (Debugger is disabled)
+#pragma config DEBUG = ON              // Background Debugger Enable (Debugger is disabled)
 #pragma config JTAGEN = ON              // JTAG Enable (JTAG Port Enabled)
 #pragma config ICESEL = ICS_PGx1        // ICE/ICD Comm Channel Select (Communicate on PGEC1/PGED1)
 #pragma config TRCEN = ON               // Trace Enable (Trace features in the CPU are enabled)
