@@ -32,24 +32,7 @@
 /******************************************************************************/
 #include <xc.h>
 #include<stdlib.h>
-/*
-void delay (void)
-{
- //int n = 50000000000;
- //while(n > 0) {n--;} // decrementing n adds short gap when delay invoked
-    for(int i = 2500; i > 0; i--);
-}*/
 
-//void delay(int milliseconds)
-//{
-//    long pause;
-//    clock_t now,then;
-//
-//    pause = milliseconds*(CLOCKS_PER_SEC/1000);
-//    now = then = clock();
-//    while( (now-then) < pause )
-//        now = clock();
-//}
 #define _XTAL_FREQ 32000000 
 #define _PLIB_OSC_H
 
@@ -58,8 +41,6 @@ void delay (void){
 };
 
 int main(void) {
-    //oscCurrent = PLIB_OSC_CurrentSysClockGet(OSC_ID_0);
-    //OSC_SYS_TYPE oscCurrent;
     //TRISE = 0; // works for RE0
     TRISEbits.TRISE0 = 0;
     TRISEbits.TRISE1 = 0;
@@ -69,10 +50,8 @@ int main(void) {
     TRISEbits.TRISE5 = 0;
     TRISEbits.TRISE6 = 0;
     TRISEbits.TRISE7 = 0;
-    
-    LATEbits.LATE0 = 0;
-    
     while (1){
+        
         delay();
         LATEbits.LATE0 = !LATEbits.LATE0;
         delay();
@@ -90,7 +69,7 @@ int main(void) {
         delay();
         LATEbits.LATE6 = !LATEbits.LATE6;
         delay();
-        // all on
+
         delay();
         LATEbits.LATE6 = !LATEbits.LATE6;
         delay();
@@ -108,7 +87,7 @@ int main(void) {
         delay();
         LATEbits.LATE0 = !LATEbits.LATE0;
         delay();
-        // all off
+        
         LATEbits.LATE0 = 1;
         delay();
         LATEbits.LATE0 = 0;
